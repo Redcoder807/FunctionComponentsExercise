@@ -107,3 +107,24 @@ function Ghostbusters() {
     <GhostbustersAll />,
     document.getElementById(`root`)
   );
+  
+  // BONUS
+  // 8a
+  function DiceRoll(){
+    // 8b
+    const die1 = Math.floor(Math.random() * 6 + 1);
+    // 8c
+    const die2 = Math.floor(Math.random() * 6 + 1);
+    // 8d
+    return <h1>{(die1 === 1 && die2 === 1) ? `SNAKE EYES` : `${die1} & ${die2}`}</h1>;
+    // OR
+    // let result;
+    // (die1 === 1 && die2 === 1) ? result = `SNAKE EYES` : result = `${die1} & ${die2}`;
+    // return <h1>{result}</h1>;
+  }
+  
+  // 8e
+  ReactDOM.render(
+    <DiceRoll />,
+    document.getElementById(`root`)
+  );
